@@ -18,10 +18,9 @@ module Metabase
         get("/table/card/#{table_id}", params)
       end
       
-      def query_table(table_id, format: :json, **params)
-        post("/api/table/#{table_id}/query/#{format}", params)
+      def query_table(table_id, **params)
+        post("/api/table/#{table_id}/query_metadata", params)
       end
-      
     end
   end
 end
