@@ -19,7 +19,7 @@ module Metabase
       end
       
       def query_table(table_id, **params)
-        post("/api/table/#{table_id}/query_metadata", params)
+        get("/api/table/#{table_id}/query_metadata", params)
       end
     end
   end
