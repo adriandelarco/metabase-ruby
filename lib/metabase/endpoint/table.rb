@@ -11,6 +11,12 @@ module Metabase
       def tables(**params)
         get('/api/table', params)
       end
+      
+      # Fetch the table.
+      #
+      def table(table_id, **params)
+        get("/table/card/#{table_id}", params)
+      end
     end
   end
 end
