@@ -40,7 +40,7 @@ module Metabase
       # @return [Array<Hash>, String] Query results
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#post-apicardcard-idqueryexport-format
       def query_card(card_id, **params)
-        post("/api/card/#{card_id}/query", **params)
+        post("/api/card/#{card_id}/query/json?format_rows=false", **params)
       end
     end
   end
